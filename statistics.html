@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red Panda Statistics</title>
+    <link rel="stylesheet" href="assets/css/statistics.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+    <body>
+
+    <!-- navbar -->
+    <nav class="bg-transparent fixed w-full top-0 z-50 shadow-lg py-4 px-6">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-3xl font-bold text-blue-400 hover:text-blue-300 transition-all">🐼 Red Panda</a>
+            <button id="menu-btn" class="lg:hidden text-blue-400 text-3xl focus:outline-none">☰</button>
+            <ul id="menu" class="hidden lg:flex space-x-8">
+                <a href="index.html" class="text-blue-300 hover:text-blue-400 transition-all">Back to Home</a>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- statistics Section -->
+    <section class="container mx-auto p-8 mt-24 text-center">
+        <h2 class="text-4xl font-bold text-blue-400 mb-4">Red Panda Statistics</h2>
+        <p class="text-lg text-gray-300 mb-8">Here are some key statistics about Red Pandas.</p>
+
+        <!-- grid of charts (2 columns on larger screens, 1 column on smaller screens) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+
+            <!-- first Chart -->
+            <div class="chart-container">
+                <canvas id="habitatChart"></canvas>
+                <h3 class="mt-4 text-lg text-blue-400">Red Panda Habitat Distribution</h3>
+            </div>
+
+            <!-- second Chart -->
+            <div class="chart-container">
+                <canvas id="dietChart"></canvas>
+                <h3 class="mt-4 text-lg text-blue-400">Diet Composition</h3>
+            </div>
+
+            <!-- third Chart -->
+            <div class="chart-container">
+                <canvas id="weightChart"></canvas>
+                <h3 class="mt-4 text-lg text-blue-400">Red Panda Weight Range</h3>
+            </div>
+
+            <!-- fourth Chart -->
+            <div class="chart-container">
+                <canvas id="lifespanChart"></canvas>
+                <h3 class="mt-4 text-lg text-blue-400">Average Lifespan</h3>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+        <p>&copy; 2025 Red Panda Conservation. | All rights reserved.</p>
+    </footer>
+
+    <script src="assets/js/statistics.js"></script>
+
+    </body>
+
+</html>
